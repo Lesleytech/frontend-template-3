@@ -9,6 +9,8 @@ import {
   ScrollRestoration,
 } from 'react-router';
 
+import RootProvider from '~/providers/RootProvider';
+
 import type { Route } from './+types/root';
 
 export const links: Route.LinksFunction = () => [];
@@ -34,9 +36,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function Root() {
   return (
-    <>
+    <RootProvider>
       <Outlet />
-    </>
+    </RootProvider>
   );
 }
 
