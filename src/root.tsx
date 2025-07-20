@@ -1,9 +1,17 @@
 import './index.css';
 
-import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration, } from 'react-router';
+import {
+  isRouteErrorResponse,
+  Links,
+  Meta,
+  Outlet,
+  Scripts,
+  ScrollRestoration,
+} from 'react-router';
+
+import RootProvider from '~/providers/RootProvider';
 
 import type { Route } from './+types/root';
-import RootProvider from '~/providers/RootProvider';
 
 export const links: Route.LinksFunction = () => [];
 
